@@ -1,0 +1,17 @@
+#include<iostream.h>
+void main()
+{
+int t,ca,cb;
+char s[100];
+cin>>t;
+for(int i=0;i<t;i++){
+cin>>S[i];
+}
+for(int i=0;i<t;i++){
+for(int i=0;s[i];i++){
+
+}
+}
+
+
+}f

@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HospitalUI.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body
+        { background-color:Teal;
+          width:90%;
+          margin-top:0px;
+          margin-right:auto;
+          margin-left:auto;
+          min-height:650px;
+       }
+       .main-table
+       {width:100%;
+        background-color:#CECEFF;
+           }
+        .style1
+        {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="main-table">
+            <tr>
+                <td class="style2">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/banner.png" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" 
+                        ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                        Width="100%" Font-Bold="True" Font-Overline="False">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <Items>
+                            <asp:MenuItem Text="Dashboard" Value="Dashboard" 
+                                NavigateUrl="~/_hospital/HospitalUI.master"></asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                            <asp:MenuItem Text="View" Value="View">
+                                <asp:MenuItem Text="View Medical History" Value="View Medical History"></asp:MenuItem>
+                                <asp:MenuItem Text="View Patient Details" Value="View Patient Details"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                            <asp:MenuItem Text="Enrollments" Value="Enrollments">
+                                <asp:MenuItem Text="Enroll Doctor" Value="Enroll Doctor" 
+                                    NavigateUrl="~/_hospital/SignUp.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Enroll Patient" Value="Enroll Patient" 
+                                    NavigateUrl="~/_hospital/SignUp.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                            <asp:MenuItem Text="Help" Value="Help">
+                                <asp:MenuItem Text="Contact Admin" Value="Contact Admin"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3" valign="top">
+                    Copyrights Reserved : KITS Warangal<br />
+                    <br />
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
